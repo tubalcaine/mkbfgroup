@@ -5,14 +5,30 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Python: Current File",
+            "name": "mkbfgroup -h",
             "type": "python",
             "request": "launch",
-            "program": "${file}",
+            "program": "src/mkbfgroup.py",
             "console": "integratedTerminal",
             "justMyCode": true,
             "args": [
                 "-h"
+            ]
+        },
+        {
+            "name": "mkbfgroup real",
+            "type": "python",
+            "request": "launch",
+            "program": "src/mkbfgroup.py",
+            "console": "integratedTerminal",
+            "justMyCode": true,
+            "args": [
+                "-s", "10.10.220.60",
+                "-U", "IEMAdmin",
+                "-P", "BigFix!123",
+                "-r", "windows of operating system",
+                "-c", "Management Scripts",
+                "-t", "AUTO Windows Computers"
             ]
         }
     ]
