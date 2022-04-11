@@ -7,6 +7,7 @@ import urllib3
 
 print("mkbfgroup version 0.1")
 
+# We assume unsigned API certificate
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 # End of warning supression
 
