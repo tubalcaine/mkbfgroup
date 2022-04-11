@@ -3,7 +3,12 @@ import argparse
 import getpass
 import requests
 
-print("Hello")
+import urllib3
+
+print("mkbfgroup version 0.1")
+
+urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
+# End of warning supression
 
 parser = argparse.ArgumentParser()
 
@@ -78,6 +83,9 @@ prepped = session.prepare_request(req)
 
 result = session.send(prepped, verify=False)
 
-if result.status_code < 200 or result.status_code >= 300:
-    print(f"REST API authentication failed with status {result.status_code}")
+if result.ok:
+    print("\n\n**** Success ****")
+    print(result.text)
+else:
+    print(f"\n\nREST API call failed with status {result.status_code}")
     print(f"Reason: {result.text}")
