@@ -6,6 +6,7 @@ import requests
 import urllib3
 
 print("mkbfgroup version 0.1")
+print("HCL BigFix Professional Services")
 
 # We assume unsigned API certificate
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
