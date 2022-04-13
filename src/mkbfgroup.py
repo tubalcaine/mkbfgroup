@@ -1,3 +1,4 @@
+#! /usr/bin/python3
 """mkbfgroup.py -- CLI tool to create automatic groups in custom sites"""
 import argparse
 import getpass
